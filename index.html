@@ -1,0 +1,374 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Az-Zahrawain Academy offers live, one-to-one Quran and Arabic classes for children and families across the US and Europe.">
+  <title>Az-Zahrawain Academy | Learn Quran with Confidence</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+
+  <style>
+    :root {
+      --sage: #1e4620;
+      --sage-dark: #123117;
+      --sage-soft: #eaf2e8;
+      --cream: #fbfaf5;
+      --cream-deep: #f2eee2;
+      --gold: #d4af37;
+      --gold-light: #f4e5a5;
+      --ink: #18301b;
+      --muted: #607065;
+      --white: #ffffff;
+      --shadow: 0 18px 50px rgba(18, 49, 23, .12);
+    }
+
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--cream);
+      font-family: "Open Sans", sans-serif;
+      line-height: 1.65;
+    }
+    h1, h2, h3, h4, .navbar-brand, .btn { font-family: "Montserrat", sans-serif; }
+    h2 { font-weight: 800; letter-spacing: -.02em; }
+    a { color: inherit; text-decoration: none; }
+    .container { max-width: 1160px; }
+
+    /* Start Navbar */
+    .navbar {
+      background: rgba(30, 70, 32, .98);
+      box-shadow: 0 3px 18px rgba(0,0,0,.08);
+    }
+    .navbar-brand { color: var(--white); font-size: 1.22rem; font-weight: 800; letter-spacing: .01em; }
+    .brand-mark {
+      display: inline-grid; place-items: center; width: 39px; height: 39px; margin-right: .55rem;
+      border: 1px solid rgba(244,229,165,.55); border-radius: 50%; color: var(--gold-light);
+    }
+    .navbar .nav-link { color: rgba(255,255,255,.82); font-weight: 600; margin: 0 .35rem; }
+    .navbar .nav-link:hover, .navbar .nav-link:focus { color: var(--gold-light); }
+    .btn-gold { background: var(--gold); border: 2px solid var(--gold); color: var(--sage-dark); font-weight: 800; }
+    .btn-gold:hover, .btn-gold:focus { background: var(--gold-light); border-color: var(--gold-light); color: var(--sage-dark); }
+    .navbar-toggler { border-color: rgba(255,255,255,.4); }
+    .navbar-toggler-icon { filter: invert(1); }
+    /* End Navbar */
+
+    /* Start Hero Section */
+    .hero {
+      position: relative;
+      isolation: isolate;
+      overflow: hidden;
+      min-height: 680px;
+      display: flex;
+      align-items: center;
+      color: var(--white);
+      background: linear-gradient(120deg, var(--sage-dark) 0%, var(--sage) 58%, #285b2c 100%);
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      inset: -30%;
+      opacity: .085;
+      background-image:
+        linear-gradient(30deg, transparent 44%, rgba(255,255,255,.9) 45%, transparent 46%),
+        linear-gradient(150deg, transparent 44%, rgba(255,255,255,.9) 45%, transparent 46%),
+        linear-gradient(90deg, transparent 48%, rgba(255,255,255,.8) 49%, transparent 50%);
+      background-size: 76px 132px;
+      transform: rotate(12deg);
+      pointer-events: none;
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      width: 470px; height: 470px; right: -180px; top: -180px;
+      border: 1px solid rgba(244,229,165,.20); border-radius: 50%;
+      box-shadow: 0 0 0 28px rgba(244,229,165,.04), 0 0 0 58px rgba(244,229,165,.03);
+    }
+    .hero-content { padding: 6rem 0; }
+    .eyebrow { color: var(--gold-light); font-size: .78rem; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; }
+    .hero h1 { max-width: 700px; margin: 1rem 0 1.25rem; font-size: clamp(2.35rem, 5vw, 4.45rem); font-weight: 800; line-height: 1.08; }
+    .hero-lead { max-width: 600px; color: rgba(255,255,255,.84); font-size: 1.12rem; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: .85rem; margin-top: 2rem; }
+    .btn-outline-light { border-width: 2px; font-weight: 700; }
+    .btn-outline-light:hover { color: var(--sage); }
+    .hero-image-wrap { position: relative; max-width: 530px; margin-left: auto; }
+    .hero-image-wrap::before { content: ""; position: absolute; inset: 16px -14px -14px 16px; border: 2px solid rgba(244,229,165,.72); border-radius: 22px; transform: rotate(3deg); }
+    .hero-image { position: relative; display: block; width: 100%; aspect-ratio: 4/3; object-fit: cover; border: 9px solid rgba(255,255,255,.94); border-radius: 20px; box-shadow: 0 24px 55px rgba(0,0,0,.28); }
+    .hero-card { position: absolute; left: -24px; bottom: 24px; display: flex; align-items: center; gap: .75rem; max-width: 220px; padding: .85rem 1rem; color: var(--ink); background: var(--white); border-radius: 13px; box-shadow: var(--shadow); font-size: .82rem; font-weight: 700; }
+    .hero-card i { display: grid; place-items: center; flex: 0 0 35px; width: 35px; height: 35px; color: var(--sage); background: var(--gold-light); border-radius: 50%; }
+    /* End Hero Section */
+
+    /* Start Trust Section */
+    .trust { position: relative; margin-top: -34px; z-index: 3; }
+    .trust-panel { padding: 1.25rem; background: var(--white); border-radius: 15px; box-shadow: var(--shadow); }
+    .trust-item { display: flex; align-items: center; gap: .8rem; padding: .5rem 1rem; }
+    .trust-item + .trust-item { border-left: 1px solid #e6ebe5; }
+    .trust-item i { color: var(--gold); font-size: 1.4rem; }
+    .trust-item strong { display: block; color: var(--sage); font-size: .95rem; }
+    .trust-item span { color: var(--muted); font-size: .78rem; }
+    /* End Trust Section */
+
+    /* Start Programs Section */
+    .section-pad { padding: 6rem 0; }
+    .section-kicker { color: var(--sage); font-size: .78rem; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; }
+    .section-heading { max-width: 680px; margin: .65rem auto 1rem; }
+    .section-intro { max-width: 650px; margin: 0 auto 2.7rem; color: var(--muted); }
+    .program-card { height: 100%; padding: 2rem; background: var(--white); border: 1px solid #e6ece2; border-radius: 16px; box-shadow: 0 8px 25px rgba(18,49,23,.05); transition: transform .2s ease, box-shadow .2s ease; }
+    .program-card:hover { transform: translateY(-5px); box-shadow: var(--shadow); }
+    .program-icon { display: grid; place-items: center; width: 55px; height: 55px; margin-bottom: 1.3rem; color: var(--sage); background: var(--gold-light); border-radius: 14px; font-size: 1.35rem; }
+    .program-card h3 { font-size: 1.15rem; font-weight: 800; }
+    .program-card p { color: var(--muted); font-size: .92rem; }
+    .program-card a { color: var(--sage); font-weight: 800; font-size: .9rem; }
+    /* End Programs Section */
+
+    /* Start Tutors & Video Section */
+    .video-section { background: var(--cream-deep); }
+    .tutors-heading { max-width: 720px; margin-bottom: 1.5rem; }
+    .tutors-heading h2 { margin: .55rem 0 .65rem; }
+    .tutors-heading p { max-width: 680px; margin: 0; color: var(--muted); }
+    .tutor-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.85rem; }
+    .tutor-card { height: 100%; padding: 1rem; background: var(--white); border: 1px solid rgba(212,175,55,.22); border-radius: 15px; box-shadow: 0 8px 25px rgba(15,23,42,.07); transition: transform .2s ease, box-shadow .2s ease; }
+    .tutor-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
+    .tutor-top { display: flex; align-items: center; gap: .75rem; margin-bottom: .5rem; }
+    .tutor-avatar { display: grid; place-items: center; flex: 0 0 50px; width: 50px; height: 50px; color: var(--gold-light); background: linear-gradient(135deg, var(--sage-dark), #334155); border: 2px solid var(--gold); border-radius: 50%; font-family: "Montserrat", sans-serif; font-size: .9rem; font-weight: 700; box-shadow: 0 0 0 3px rgba(212,175,55,.15); }
+    .tutor-card h3 { margin: 0 0 .15rem; font-size: .92rem; line-height: 1.3; font-weight: 700; }
+    .tutor-title { display: block; color: var(--muted); font-size: .68rem; line-height: 1.3; }
+    .tutor-card p { margin: .4rem 0 .6rem; color: var(--muted); font-size: .75rem; line-height: 1.45; }
+    .language-badge { display: inline-flex; align-items: center; gap: .3rem; padding: .25rem .5rem; color: var(--sage); background: var(--sage-soft); border-radius: 999px; font-size: .65rem; font-weight: 700; }
+    .language-badge i { color: var(--gold); }
+    .video-player { overflow: hidden; background: var(--sage-dark); border: 5px solid var(--white); border-radius: 18px; box-shadow: var(--shadow); }
+    .video-player .ratio { min-height: 250px; }
+    .video-player iframe { border: 0; }
+    .video-caption { margin: .8rem 0 0; color: var(--muted); font-size: .78rem; text-align: center; }
+    /* End Tutors & Video Section */
+
+    /* Start CTA Section */
+    .cta-section { padding: 4.5rem 0; color: var(--white); background: var(--sage); }
+    .cta-section h2 { max-width: 690px; margin: 0 auto .8rem; }
+    .cta-section p { max-width: 620px; margin: 0 auto 1.5rem; color: rgba(255,255,255,.78); }
+    /* End CTA Section */
+
+    /* Start Footer */
+    footer { padding: 3rem 0 1.4rem; color: rgba(255,255,255,.74); background: var(--sage-dark); }
+    footer h3, footer h4 { color: var(--white); }
+    footer h3 { font-size: 1.2rem; }
+    footer h4 { font-size: .85rem; text-transform: uppercase; letter-spacing: .1em; }
+    footer ul { list-style: none; padding: 0; margin: 0; }
+    footer li { margin: .45rem 0; font-size: .9rem; }
+    footer a:hover { color: var(--gold-light); }
+    .social-link { display: inline-grid; place-items: center; width: 34px; height: 34px; margin-right: .3rem; color: var(--white); border: 1px solid rgba(255,255,255,.28); border-radius: 50%; }
+    .copyright { padding-top: 1.5rem; margin-top: 2rem; border-top: 1px solid rgba(255,255,255,.15); font-size: .8rem; }
+    /* End Footer */
+
+    @media (max-width: 991.98px) {
+      .hero { min-height: auto; }
+      .hero-content { padding: 5rem 0 6rem; }
+      .hero-image-wrap { max-width: 620px; margin: 2rem auto 0; }
+      .trust { margin-top: -22px; }
+      .trust-item { padding: .7rem; }
+    }
+    @media (max-width: 767.98px) {
+      .hero-content { padding: 4rem 0 5rem; }
+      .hero h1 { font-size: clamp(2.15rem, 10vw, 3.2rem); }
+      .hero-lead { font-size: 1rem; }
+      .hero-actions .btn { width: 100%; }
+      .hero-image-wrap { margin: 2.5rem .7rem 0; }
+      .hero-card { left: -8px; bottom: 14px; }
+      .trust { margin-top: -12px; }
+      .trust-item + .trust-item { border-left: 0; border-top: 1px solid #e6ebe5; }
+      .section-pad { padding: 4.5rem 0; }
+      .tutor-grid { grid-template-columns: 1fr; }
+      .video-player { margin-top: .5rem; }
+    }
+
+    @media (max-width: 575.98px) {
+      .hero-content { padding: 3.25rem .75rem 4.5rem; }
+      .hero .eyebrow {
+        display: block;
+        max-width: 100%;
+        overflow: hidden;
+        white-space: nowrap;
+        font-size: clamp(.62rem, 2.8vw, .75rem);
+        letter-spacing: .08em;
+        line-height: 1.35;
+      }
+      .hero h1 {
+        margin: .85rem 0 1rem;
+        font-size: clamp(2rem, 9vw, 2.85rem);
+        line-height: 1.12;
+      }
+      .hero-lead {
+        max-width: 34rem;
+        margin-bottom: 0;
+        font-size: .98rem;
+        line-height: 1.65;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Start Navbar -->
+  <nav class="navbar navbar-expand-lg sticky-top" aria-label="Main navigation">
+    <div class="container">
+      <a class="navbar-brand" href="index.html"><span class="brand-mark" aria-hidden="true"><i class="fa-solid fa-star-and-crescent"></i></span>Az-Zahrawain Academy</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="#programs">Programs</a></li>
+          <li class="nav-item"><a class="nav-link" href="#why-az-zahrawain">Why Az-Zahrawain</a></li>
+          <li class="nav-item"><a class="nav-link" href="#tutors">Tutors</a></li>
+          <li class="nav-item"><a class="nav-link" href="blog.html">Media Library</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          <li class="nav-item ms-lg-2 mt-2 mt-lg-0"><a class="btn btn-gold px-3 py-2" href="register.html">Book Your Free Trial</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- End Navbar -->
+
+  <!-- Start Hero Section -->
+  <header class="hero" id="home">
+    <div class="container hero-content">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6">
+          <div class="eyebrow"><i class="fa-solid fa-sparkles me-2" aria-hidden="true"></i>Trusted Quran & Arabic Learning for all ages</div>
+          
+          <h2 class="hero-title">Empower Your Islamic Identity – Online Quran Classes with Certified Tutors</h2>
+          
+          <p class="hero-lead">Build a lasting connection with the Quran through warm, live online classes led by certified tutors who understand how learners of all ages (Children, Youth, and Adults) learn.</p>
+          <div class="hero-actions">
+            <a class="btn btn-gold btn-lg px-4 py-3" href="register.html">Book Your Free Trial <i class="fa-solid fa-arrow-right ms-2" aria-hidden="true"></i></a>
+            <a class="btn btn-outline-light btn-lg px-4 py-3" href="#programs">Explore Programs</a>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="hero-image-wrap">
+            <img class="hero-image" src="assets/student-learning.jpg" alt="A student wearing headphones while learning online on a laptop" width="500" height="333">
+            <div class="hero-card"><i class="fa-solid fa-user-check" aria-hidden="true"></i><span>Patient, certified tutors for every learner</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- End Hero Section -->
+
+  <!-- Start Trust Section -->
+  <section class="trust" id="why-az-zahrawain" aria-label="Why families choose Az-Zahrawain">
+    <div class="container">
+      <div class="trust-panel row g-0">
+        <div class="col-lg-4 trust-item"><i class="fa-solid fa-certificate" aria-hidden="true"></i><div><strong>Certified Tutors</strong><span>Qualified and carefully selected</span></div></div>
+        <div class="col-lg-4 trust-item"><i class="fa-solid fa-people-arrows" aria-hidden="true"></i><div><strong>1-on-1 Learning</strong><span>Personalized lessons for each student</span></div></div>
+        <div class="col-lg-4 trust-item"><i class="fa-solid fa-clock" aria-hidden="true"></i><div><strong>US & EU Friendly</strong><span>Flexible scheduling across time zones</span></div></div>
+      </div>
+    </div>
+  </section>
+  <!-- End Trust Section -->
+
+  <!-- Start Programs Section -->
+  <section class="section-pad" id="programs">
+    <div class="container text-center">
+      <div class="section-kicker">Learning paths for every stage</div>
+      <h2 class="section-heading">A clear path from first letters to confident recitation</h2>
+      <p class="section-intro">Our tutors meet students where they are and help them progress with encouragement, structure, and measurable milestones.</p>
+      <div class="row g-4 text-start">
+        <div class="col-md-4"><article class="program-card"><div class="program-icon"><i class="fa-solid fa-book-quran" aria-hidden="true"></i></div><h3>Quran Recitation & Tajweed</h3><p>Improve pronunciation, fluency, and beautiful recitation through a supportive one-to-one lesson plan.</p><a href="register.html">Start learning <i class="fa-solid fa-arrow-right ms-1" aria-hidden="true"></i></a></article></div>
+        <div class="col-md-4"><article class="program-card"><div class="program-icon"><i class="fa-solid fa-brain" aria-hidden="true"></i></div><h3>Quran Memorization (Hifz)</h3><p>Memorize with an age-appropriate routine, regular revision, and a tutor who keeps motivation high.</p><a href="register.html">Start learning <i class="fa-solid fa-arrow-right ms-1" aria-hidden="true"></i></a></article></div>
+        <div class="col-md-4"><article class="program-card"><div class="program-icon"><i class="fa-solid fa-language" aria-hidden="true"></i></div><h3>Arabic & Islamic Studies</h3><p>Explore Arabic foundations and essential Islamic knowledge in engaging lessons built for English speakers.</p><a href="register.html">Start learning <i class="fa-solid fa-arrow-right ms-1" aria-hidden="true"></i></a></article></div>
+      </div>
+    </div>
+  </section>
+  <!-- End Programs Section -->
+
+  <!-- Start Our Tutors Section -->
+  <section class="section-pad video-section" id="tutors">
+    <div class="container">
+      <div class="tutors-heading">
+        <div class="section-kicker">The people behind every confident recitation</div>
+        <h2>Meet Our Certified Tutors</h2>
+        <p>Al-Azhar Certified Tutors Dedicated to Inspiring You and Your Child</p>
+      </div>
+      <div class="row align-items-start g-5">
+        <div class="col-lg-7">
+          <div class="tutor-grid" aria-label="Tutor profiles">
+            <article class="tutor-card">
+              <div class="tutor-top"><div class="tutor-avatar" aria-label="Avatar placeholder for Sheikh Ahmed">SA</div><div><h3>Sheikh Ahmed</h3><span class="tutor-title">Al-Azhar University Graduate</span></div></div>
+              <p>Specialized in Tajweed and Quran recitation for children with 5+ years of experience.</p>
+              <span class="language-badge"><i class="fa-solid fa-language" aria-hidden="true"></i> Fluent in English & Arabic</span>
+            </article>
+            <article class="tutor-card">
+              <div class="tutor-top"><div class="tutor-avatar" aria-label="Avatar placeholder for Ustadha Maryam">UM</div><div><h3>Ustadha Maryam</h3><span class="tutor-title">Quran & Islamic Studies Mentor</span></div></div>
+              <p>Creates joyful, structured lessons that help young learners build a lasting daily habit.</p>
+              <span class="language-badge"><i class="fa-solid fa-language" aria-hidden="true"></i> Fluent in English & Arabic</span>
+            </article>
+            <article class="tutor-card">
+              <div class="tutor-top"><div class="tutor-avatar" aria-label="Avatar placeholder for Sheikh Omar">SO</div><div><h3>Sheikh Omar</h3><span class="tutor-title">Hifz & Advanced Tajweed Tutor</span></div></div>
+              <p>Guides memorization with patient revision plans and clear, confidence-building feedback.</p>
+              <span class="language-badge"><i class="fa-solid fa-language" aria-hidden="true"></i> English, Arabic & French</span>
+            </article>
+            <article class="tutor-card">
+              <div class="tutor-top"><div class="tutor-avatar" aria-label="Avatar placeholder for Ustadha Hana">UH</div><div><h3>Ustadha Hana</h3><span class="tutor-title">Arabic Language Specialist</span></div></div>
+              <p>Makes Arabic foundations approachable for English-speaking children and families.</p>
+              <span class="language-badge"><i class="fa-solid fa-language" aria-hidden="true"></i> English & Arabic</span>
+            </article>
+          </div>
+        </div>
+        <div class="col-lg-5">
+          <div class="video-player">
+            <div class="ratio ratio-16x9">
+              <iframe src="https://www.youtube-nocookie.com/embed/kkWA06uwdnU" title="Sample live Quran recitation and Tajweed session" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+            </div>
+          </div>
+          <p class="video-caption"><i class="fa-solid fa-circle-play me-1" aria-hidden="true"></i>Watch a sample live Quran recitation session</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Our Tutors Section -->
+
+  <!-- Start CTA Section -->
+  <section class="cta-section text-center" id="contact">
+    <div class="container"><h2>Give yourself or your loved ones a confident start with the Quran.</h2><p>Book a friendly, no-pressure trial lesson and discover the right learning path for your family.</p><a class="btn btn-gold btn-lg px-4 py-3" href="register.html">Book Your Free Trial <i class="fa-solid fa-arrow-right ms-2" aria-hidden="true"></i></a></div>
+  </section>
+  <!-- End CTA Section -->
+
+  <!-- Start Footer -->
+<footer>
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-5">
+        <h3><span class="brand-mark" aria-hidden="true"><i class="fa-solid fa-star-and-crescent"></i></span>Az-Zahrawain Academy</h3>
+        <p class="mt-3 mb-0">Helping children and families grow closer to the Quran, wherever they live.</p>
+      </div>
+      <div class="col-6 col-lg-3">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="#programs">Programs</a></li>
+          <li><a href="#why-az-zahrawain">Why Az-Zahrawain</a></li>
+          <li><a href="register.html">Free Trial</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-4">
+        <h4>Connect</h4>
+        <p class="mb-2">
+          <a href="https://wa.me/201110467123?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%A8%D8%B1%D8%A7%D9%85%20%D8%A3%D9%83%D8%A7%D8%AF%D9%8A%D9%85%D9%8A%D8%A9%20%D8%A7%D9%84%D8%B2%D9%87%D8%B1%D8%A7%D9%88%D9%8A%D9%86" target="_blank" rel="noopener noreferrer">📱 +20 111 046 7123</a>
+        </p>
+        <a class="social-link" href="#" aria-label="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+        <a class="social-link" href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
+        <a class="social-link" href="#" aria-label="YouTube"><i class="fa-brands fa-youtube" aria-hidden="true"></i></a>
+      </div>
+    </div>
+    <div class="copyright">© 2026 Az-Zahrawain Academy. All rights reserved.</div>
+  </div>
+</footer>
+<!-- End Footer -->
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
